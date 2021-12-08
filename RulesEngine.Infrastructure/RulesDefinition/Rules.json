@@ -1,0 +1,37 @@
+﻿[
+    {
+      "name": "PhysicalProductRule",
+      "Expression": "Payment.Concept == \"physical product\"",
+      "Action": "PackingSlipAction"
+    },
+    {
+      "name": "BookRule",
+      "Expression": "Payment.Concept == \"Book\"",
+      "Action": "BookAction"
+    },
+    {
+      "name": "CommissionPaymentRule",
+      "Expression": "Payment.Concept == \"Book\" || Payment.Concept == \"physical product\"",
+      "Action": "CommissionPaymentAction"
+    },
+    {
+      "name": "NewMembershipRule",
+      "Expression": "Payment.Concept == \"New Membership\"",
+      "Action": "NewMembershipAction"
+    },
+    {
+      "name": "UpgradeMembershipRule",
+      "Expression": "Payment.Concept == \"Upgrade Membership\"",
+      "Action": "UpgradeMembershipAction"
+    },
+    {
+      "name": "EmailMembershipOwnerRule",
+      "Expression": "Payment.Concept == \"New Membership\" || Payment.Concept == \"Upgrade Membership\"",
+      "Action": "EmailMembershipOwnerAction"
+    },
+    {
+      "name": "VideoRule",
+      "Expression": "Payment.Concept == \"Video\"",
+      "Action": "VideoAction"
+    }
+]

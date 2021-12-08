@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="RulesDefinition\Rules.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="RulesDefinition\Rules.json" />
+  </ItemGroup>
+
+</Project>
