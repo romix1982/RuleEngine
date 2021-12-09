@@ -16,6 +16,7 @@ namespace RulesEngine.UnitTest.Models
         [TestCase("Payment.Concept == \"New Membership\" || Payment.Concept == \"Upgrade Membership\"", "Upgrade Membership")]
         [TestCase("Payment.Concept == \"New Membership\" || Payment.Concept == \"Upgrade Membership\"", "New Membership")]
         [TestCase("Payment.Concept == \"Video\"", "Video")]
+        [TestCase("Payment.Concept != \"New Membership\"", "Book")]
         public async Task IsMatch_should_return_true_when_expression_match_with_payment_concept(string expression, string concept)
         {
             //Arrange

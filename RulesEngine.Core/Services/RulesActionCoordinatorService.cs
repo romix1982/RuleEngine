@@ -27,6 +27,8 @@ namespace RulesEngine.Core.Services
         {
             try
             {
+                Console.WriteLine($"The payment concept is {payment.Concept}.");
+
                 var actions = await _rulesValidatorService.ApplyRulesAsync(payment);
 
                 foreach (var action in actions)

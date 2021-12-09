@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace RulesEngine.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class RuleController : ControllerBase
     {
@@ -17,6 +16,7 @@ namespace RulesEngine.API.Controllers
             _rulesActionCoordinatorService = rulesActionCoordinatorService;
         }
 
+        [Route("api/ApplyRules")]
         [HttpPost]
         public async Task<ActionResult> ApplyRules(Payment payment)
         {
