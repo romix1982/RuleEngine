@@ -2,7 +2,8 @@
 
 ## About the Solution
 
-The Solution has 5 projects
+The Solution is writen in C#, using .Net 5, ASP.Net Core for the Web API and NUnit for testing.\
+It has 5 projects:
 * RuleEngine API
 * RulesEngine Core
 * RulesEngine Infrastructure
@@ -59,5 +60,6 @@ Every rule in the file has this structure:
  * A rule could have a list of actions.
  * RuleEngine could be a webhook using an Azure function.
  * Add input validations.
+ * Validate rules json format.
 
  
