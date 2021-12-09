@@ -9,7 +9,7 @@ namespace RulesEngine.Core.Services.Actions
 
         public void DoAction(Payment payment)
         {
-            Console.WriteLine("activate that membership.");
+            Console.WriteLine($"Activate membership for {payment.Customer.FullName}.");
         }
     }
 }

@@ -22,9 +22,14 @@ namespace RulesEngine.Core.Services
         public async Task<IEnumerable<string>> ApplyRulesAsync(Payment payment)
         {
             var rules = await _ruleService.GetRulesAsync();
-            return (from rule in rules
-                    where rule.IsMatch(payment)
-                    select rule.Action).ToList();
+            var matchList = new List<string>();
+            foreach (var rule in rules)
+            {
+                if (await rule.IsMatchAsync(payment))
+                    matchList.Add(rule.Action);
+            }
+
+            return matchList;
         }
     }
 }

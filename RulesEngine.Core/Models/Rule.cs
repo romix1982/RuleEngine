@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis.CSharp.Scripting;
+using System.Threading.Tasks;
 
 namespace RulesEngine.Core.Models
 {
@@ -8,10 +9,10 @@ namespace RulesEngine.Core.Models
         public string Expression { get; set; }
         public string Action { get; set; }
 
-        public bool IsMatch(Payment input)
+        public async Task<bool> IsMatchAsync(Payment input)
         {
             var payment = new Globals { Payment = input };
-            return CSharpScript.EvaluateAsync<bool>(Expression, globals: payment).Result;
+            return await CSharpScript.EvaluateAsync<bool>(Expression, globals: payment);
         }
     }
 

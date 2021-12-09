@@ -1,7 +1,7 @@
 ﻿[
   {
     "name": "PhysicalProductRule",
-    "Expression": "Payment.Concept == \"physical product\"",
+    "Expression": "Payment.Concept == \"Physical product\"",
     "Action": "PackingSlipAction"
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "name": "CommissionPaymentRule",
-    "Expression": "Payment.Concept == \"Book\" || Payment.Concept == \"physical product\"",
+    "Expression": "Payment.Concept == \"Book\" || Payment.Concept == \"Physical product\"",
     "Action": "CommissionPaymentAction"
   },
   {

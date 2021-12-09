@@ -9,7 +9,7 @@ namespace RulesEngine.Core.Services.Actions
 
         public void DoAction(Payment payment)
         {
-            Console.WriteLine("Apply the upgrade."); 
+            Console.WriteLine($"Apply the upgrade to {payment.Customer.FullName}."); 
         }
     }
 }

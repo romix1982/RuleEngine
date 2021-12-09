@@ -9,7 +9,7 @@ namespace RulesEngine.Core.Services.Actions
 
         public void DoAction(Payment payment)
         {
-            Console.WriteLine("create a duplicate packing slip for the royalty department.");
+            Console.WriteLine("Create a duplicate packing slip for the royalty department.");
         }
     }
 }

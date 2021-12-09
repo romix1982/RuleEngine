@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using RulesEngine.Core.Config;
 using RulesEngine.Core.Models;
 using RulesEngine.Infrastructure.Provider;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -27,8 +28,16 @@ namespace RulesEngine.Core.Repositories
 
         public async Task<IEnumerable<Rule>> GetRulesAsync()
         {
-            var jsonRules = await new StreamReader(_streamRules).ReadToEndAsync();
-            return JsonConvert.DeserializeObject<IEnumerable<Rule>>(jsonRules);
+            try
+            {
+                var jsonRules = await new StreamReader(_streamRules).ReadToEndAsync();
+                return JsonConvert.DeserializeObject<IEnumerable<Rule>>(jsonRules);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
     }
 }

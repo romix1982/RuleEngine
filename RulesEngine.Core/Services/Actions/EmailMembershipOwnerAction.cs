@@ -9,7 +9,7 @@ namespace RulesEngine.Core.Services.Actions
 
         public void DoAction(Payment payment)
         {
-            Console.WriteLine("e-mail the owner and inform them of the activation / upgrade.");
+            Console.WriteLine($"E-mail to {payment.Customer.Email} and inform them of the {payment.Concept}");
         }
     }
 }
