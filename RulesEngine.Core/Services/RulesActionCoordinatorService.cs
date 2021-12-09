@@ -13,8 +13,8 @@ namespace RulesEngine.Core.Services
 
     public class RulesActionCoordinatorService : IRulesActionCoordinatorService
     {
-        private IEnumerable<IRuleTriggerAction> _ruleTriggerActions;
-        private IRulesValidatorService _rulesValidatorService;
+        private readonly IEnumerable<IRuleTriggerAction> _ruleTriggerActions;
+        private readonly IRulesValidatorService _rulesValidatorService;
 
         public RulesActionCoordinatorService(IRulesValidatorService rulesValidatorService, IEnumerable<IRuleTriggerAction> ruleTriggerActions)
         {

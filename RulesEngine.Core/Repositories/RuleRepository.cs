@@ -16,7 +16,6 @@ namespace RulesEngine.Core.Repositories
     public class RuleRepository : IRuleRepository
     {
         private readonly RulesConfig _rulesConfig;
-//        private const string ResourceName = "RulesEngine.Infrastructure.RulesDefinition.Rules.json";
         private readonly MemoryStream _streamRules;
 
         public RuleRepository(IOptions<RulesConfig> rulesConfig, IResourceLoader _resourceLoader)

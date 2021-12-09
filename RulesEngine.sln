@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RulesEngine.Infrastructure"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RulesEngine.IntegrationTest", "RulesEngine.IntegrationTest\RulesEngine.IntegrationTest.csproj", "{0DB0E793-8D38-4366-B969-18215C3BF745}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesEngine.API", "RulesEngine\RulesEngine.API.csproj", "{92428403-BE86-41F4-BA6D-25E083288E3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0DB0E793-8D38-4366-B969-18215C3BF745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DB0E793-8D38-4366-B969-18215C3BF745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DB0E793-8D38-4366-B969-18215C3BF745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92428403-BE86-41F4-BA6D-25E083288E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92428403-BE86-41F4-BA6D-25E083288E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92428403-BE86-41F4-BA6D-25E083288E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92428403-BE86-41F4-BA6D-25E083288E3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
